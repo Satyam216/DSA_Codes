@@ -8,40 +8,45 @@ struct node {
     
     node(int value){
         this->data = value;
-        this->left = null;
-        this->right = null;
+        this->left = nullptr;
+        this->right = nullptr;
     }
-    
-} 
+};  
 
 node* insertBST(node* root , int value){
 
-    if (root = null){
+    if (root = nullptr){
         return new node(value);
     }
     if (value < root -> data){
         root ->left = insertBST(root ->left , value);
     }
     else{
-        root ->right = insertBST(root ->rigth ,value);
+        root ->right = insertBST(root ->right ,value);
     }
     return root ;
 }
 
 void inorder(node *root){
-    if (root = null){
+    if (root = nullptr){
         return;
     }
-    inorder(root-> left);
+    inorder(root->left);
     cout<<root ->data<<" ";
-    inorder(root ->right);
+    inorder(root->right);
 }
 
 int main (){
-    int n;
-    node *root = null;
-    cout<<"Insert the elements of BST"<<endl;
-    cin>>n;
-    root = insertBST(root,n);
+    int n, val;
+    node *root = nullptr;
+    cout << "How many elements to insert in BST? ";
+    cin >> n;
+    cout << "Insert the elements of BST:" << endl;
+    for(int i = 0; i < n; i++) {
+        cin >> val;
+        root = insertBST(root, val);
+    }
+    cout << "Inorder traversal: ";
     inorder(root);
+    cout << endl;
 }

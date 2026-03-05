@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "DoublyLinkedList",
+      "request": "launch",
+      "mainClass": "DoublyLinkedList",
+      "projectName": "DSA_d712ae0a"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
